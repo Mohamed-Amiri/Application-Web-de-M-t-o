@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background: url(img&icon/istockphoto-962500712-640x640.jpg) no-repeat center center/cover;
+    height: 55vh;
+   
+
+}
+
+/* .inp{
+border-radius: 50px;
+margin-bottom: 20px;
+}
+.mb-5{
+    padding: 15px;
+}
+.container{
+ background-color: rgb(201, 228, 250);
+ width: 230px;
+ height: 200px;
+ margin-left: 530px;
+ margin-top: -90px;
+ border-radius: 20px;
+ appearance: 50px;
+opacity: 0.6;
+
+} */
+
+
+
+.intro , .bottom
+{
+    height: 50vh;
+}
+
+
+   
