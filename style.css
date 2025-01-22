@@ -2,38 +2,73 @@
     margin: 0;
     padding: 0;
 }
-main{
+body{
+    margin: 0;
+    padding: 0;
     background: url(img&icon/istockphoto-962500712-640x640.jpg) no-repeat center center/cover;
-    height: 55vh;
+    height: 100vh;
    
 
 }
-
-/* .inp{
-border-radius: 50px;
-margin-bottom: 20px;
-}
-.mb-5{
-    padding: 15px;
-}
-.container{
- background-color: rgb(201, 228, 250);
- width: 230px;
- height: 200px;
- margin-left: 530px;
- margin-top: -90px;
- border-radius: 20px;
- appearance: 50px;
-opacity: 0.6;
-
-} */
-
-
-
 .intro , .bottom
 {
-    height: 50vh;
+    height: 40vh;
 }
 
 
-   
+
+.weather-card {
+    width: 300px;
+    height: fit-content;
+    background: url('background.jpg') no-repeat center/cover; /* Replace with your background image */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(219, 225, 244);
+    overflow: hidden;
+}
+
+.weather-header {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.temperature-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-temp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-temp h6 {
+    margin-bottom: 0;
+}
+.left img{
+display: block;
+height: 40px;
+width: 40px;
+}
+
+.left div {
+    width: fit-content;
+    display: inline-block;
+}
+
+.left .card , .right .card{
+    
+    height: 300px;
+ 
+} 
