@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-    <main class="container-fluid P-0 m-0">
+    <main class="container-fluid p-0 m-0">
+        <!-- Search Section -->
         <section class="intro">
-            <!-- chercher  -->
-            <div>
-                <input class="  h-10  mt-2 rounded" type="text">
-                <button class="rounded">Search</button>
+            <div class="container pt-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Search location...">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- card  -->
 
-
-            <div class="position-relative w-50px">
-                <div class=" bom d-flex justify-content-center align-items-center vh-100">
-
-                    <div class="card position-absolute top-0  weather-card text-center p-3">
-                        <!-- Header Section -->
-                        <div class="weather-header mb-2">
-                            <h5 class="mb-1">Maroc</h5>
-                            <small>Beni Mellal</small>
-                            <br>
-                            <small>few clouds</small>
-
-                            <!-- Weather Details Section -->
-                            <div class="details-container d-flex justify-content-center mt-0 h-50px w-50px">
-                                <!-- Weather Icon -->
-                                <div>
-                                    <img src="img&icon/animated/cloudy-day-3.svg" alt="Few clouds"
-                                        class="weather-icon ">
-                                </div>
-
-                                <!-- Weather Footer -->
-                                <div class="footer-temp">
-                                    <img src="img&icon/temperature-removebg-preview.png" alt="Temperature"
-                                        class="temperature-icon">
-                                    <h6>22°C</h6>
+            <!-- Main Weather Card -->
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card weather-card text-center p-3">
+                            <div class="weather-header mb-3 mt-2 ">
+                                <h5 class="mb-1">Maroc</h5>
+                                <small class="d-block">Beni Mellal</small>
+                                <small class="d-block mb-3">few clouds</small>
+                                
+                                <div class="details-container d-flex justify-content-center align-items-center gap-3">
+                                    <div class="weather-icon-container">
+                                        <img src="img&icon/animated/cloudy-day-3.svg" alt="Few clouds" class="weather-icon">
+                                    </div>
+                                    <div class="footer-temp d-flex align-items-center">
+                                        <img src="img&icon/temperature-removebg-preview.png" alt="Temperature" class="temperature-icon me-2">
+                                        <h6 class="mb-0">22°C</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -52,70 +47,71 @@
                 </div>
             </div>
         </section>
-        <!-- end section intro -->
 
-        <!-- start bottom section -->
-        <section class="bottom  row m-4">
-            <div class="left col-sm-12 col-md-6 col-lg-8 h-50 mb-5 ">
-                <div class="card    weather-card text-center p-5 row">
-                 <div class="days">
-                      <p>Lundi</p>
-                      <p>Mardi</p>
-                      <p>Mercredi</p>
-                      <p>Jeudi</p>
-                      <p>Vendredi</p>
-                 </div>
-                 <div class="iconweather w-25 pt-2 ">
-                    <img class="pt-3"  src="img&icon/animated/cloudy-day-2.svg" alt="">
-                    <img src="img&icon/animated/rainy-2.svg" alt="">
-                    <img src="img&icon/animated/snowy-5.svg" alt="">
-                    <img src="img&icon/static/weather.svg" alt="">
-                    <img src="img&icon/static/cloudy-day-1.svg" alt="">
-                 </div>
-                 <div class="celsiuse">
-                   <p>22°C</p>
-                   <p>12°C</p>
-                   <p>13°C</p>
-                   <p>27°C</p>
-                   <p>25°C</p>
-                   
-                 </div>
+        <!-- Forecast and Details Section -->
+        <section class="bottom container mt-4 ">
+            <div class="row justify-content-center">
+                <!-- 5-Day Forecast -->
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card weather-card h-100">
+                        <div class="card-body p-4">
+                            <div class="forecast-grid justify-content-around ">
+                                <div class="days ">
+                                    <p class="mb-3">Lundi</p>
+                                    <p class="mb-3">Mardi</p>
+                                    <p class="mb-3">Mercredi</p>
+                                    <p class="mb-3">Jeudi</p>
+                                    <p class="mb-3">Vendredi</p>
+                                </div>
+                                <div class="iconweather p-3 ">
+                                    <img src="img&icon/animated/cloudy-day-2.svg" alt="Cloudy" class="mb-3">
+                                    <img src="img&icon/animated/rainy-2.svg" alt="Rainy" class="mb-3">
+                                    <img src="img&icon/animated/snowy-5.svg" alt="Snowy" class="mb-3">
+                                    <img src="img&icon/static/weather.svg" alt="Weather" class="mb-3">
+                                    <img src="img&icon/static/cloudy-day-1.svg" alt="Cloudy" class="mb-3">
+                                </div>
+                                <div class="celsiuse">
+                                    <p class="mb-3">22°C</p>
+                                    <p class="mb-3">12°C</p>
+                                    <p class="mb-3">13°C</p>
+                                    <p class="mb-3">27°C</p>
+                                    <p class="mb-3">25°C</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="right col-sm-12 col-md-4 col-lg-4   justify-content-center">
-                <div class="card    justify-content-center   weather-card text-center col-md-6 p-5 ">
-                    <div class="d-flex justify-content-between mb-2"> <img src="img&icon/7963896.png" alt="Icon 4"
-                            class="img-fluid" style="width: 30px;">
-                        <small class="text-center mb-2">Rafales: 11 km/h</small>
+                <!-- Weather Details -->
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card weather-card h-100">
+                        <div class="card-body p-4">
+                            <div class="details-grid h-100 d-flex flex-column justify-content-around">
+                                <div class="weather-detail d-flex justify-content-between align-items-center">
+                                    <img src="img&icon/7963896.png" alt="Wind gusts" class="detail-icon">
+                                    <span>Rafales: 11 km/h</span>
+                                </div>
+                                <div class="weather-detail d-flex justify-content-between align-items-center">
+                                    <img src="img&icon/1146907.png" alt="Wind speed" class="detail-icon">
+                                    <span>Vent moyen: 2 km/h</span>
+                                </div>
+                                <div class="weather-detail d-flex justify-content-between align-items-center">
+                                    <img src="img&icon/2828802.png" alt="Humidity" class="detail-icon">
+                                    <span>Humidité: 50%</span>
+                                </div>
+                                <div class="weather-detail d-flex justify-content-between align-items-center">
+                                    <img src="img&icon/3923638.png" alt="Feels like" class="detail-icon">
+                                    <span>T. ressentie: 11°C</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-between mb-2"><img src="img&icon/1146907.png" alt="Icon 1"
-                            class="img-fluid" style="width: 30px;">
-                        <small class="text-center mb-2">Vent moyen: 2 km/h</small>
-                    </div>
-                    <div class="d-flex justify-content-between mb-2"> <img src="img&icon/2828802.png" alt="Icon 2"
-                            class="img-fluid" style="width: 30px;">
-                        <small class="text-center mb-2">Humidité: 50%</small>
-                    </div>
-                    <div class="d-flex justify-content-between mb-2"><img src="img&icon/3923638.png" alt="Icon 3"
-                            class="img-fluid" style="width: 30px;">
-                        <small class="text-center">Ensoleillé, T. ressentie: 11°</small>
-                    </div>
-
                 </div>
-
-
-
-
             </div>
         </section>
-
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="bootstrap.min.js.js"></script>
-
-
 </body>
-
 </html>

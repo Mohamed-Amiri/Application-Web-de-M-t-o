@@ -1,39 +1,41 @@
-*{
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-}
-body{
-    margin: 0;
-    padding: 0;
-    background: url(img&icon/istockphoto-962500712-640x640.jpg) no-repeat center center/cover;
-    height: 100vh;
-   
-
-}
-.intro , .bottom
-{
-    height: 40vh;
+    box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    background: url(img&icon/istockphoto-962500712-640x640.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
 
+/* Layout Sections */
+.intro, .bottom {
+    min-height: 40vh;
+}
 
+/* Weather Card Styles */
 .weather-card {
-    width: 300px;
-    height: fit-content;
-    background: url('background.jpg') no-repeat center/cover; /* Replace with your background image */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     color: rgb(219, 225, 244);
-    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 200px; /* Fixed height for both cards */
 }
 
-.weather-header {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+.weather-card:hover {
+    transform: translateY(-5px);
 }
 
+/* Weather Icons */
 .weather-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .temperature-icon {
@@ -41,34 +43,80 @@ body{
     height: 20px;
 }
 
-.details-container {
-    display: flex;
+.detail-icon {
+    width: 45px;
+    height: 45px;
+}
+
+/* Forecast Grid */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    height: 100%;
     align-items: center;
-    justify-content: space-between;
 }
 
-.footer-temp {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.days p, .celsiuse p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    height: 45px;
 }
 
-.footer-temp h6 {
-    margin-bottom: 0;
-}
-.left img{
-display: block;
-height: 40px;
-width: 40px;
-}
-
-.left div {
-    width: fit-content;
-    display: inline-block;
+.iconweather img {
+    width: 50px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    display: block;
+    margin-left: 10px;
 }
 
-.left .card , .right .card{
-    
-    height: 300px;
- 
-} 
+/* Weather Details */
+.weather-detail {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 10px;
+}
+
+.weather-detail span {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+.celsiuse{
+margin-left: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .weather-card {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .forecast-grid {
+        gap: 0.3rem;
+    }
+
+    .weather-detail {
+        padding: 0.5rem;
+    }
+
+    .weather-detail span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .forecast-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .iconweather img {
+        margin: 0.5rem auto;
+    }
+
+    .days p, .celsiuse p {
+        margin-bottom: 0.3rem;
+    }
+}
