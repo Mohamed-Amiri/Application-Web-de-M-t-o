@@ -65,7 +65,7 @@ body {
 
 .iconweather img {
     width: 50px;
-    height: 40px;
+    height: 50px;
     margin-bottom: 0.5rem;
     display: block;
     margin-left: 10px;
@@ -83,40 +83,7 @@ body {
     margin-left: 1rem;
 }
 .celsiuse{
+   
 margin-left: 50px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .weather-card {
-        height: auto;
-        min-height: 300px;
-    }
-
-    .forecast-grid {
-        gap: 0.3rem;
-    }
-
-    .weather-detail {
-        padding: 0.5rem;
-    }
-
-    .weather-detail span {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .forecast-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .iconweather img {
-        margin: 0.5rem auto;
-    }
-
-    .days p, .celsiuse p {
-        margin-bottom: 0.3rem;
-    }
-}

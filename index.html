@@ -15,8 +15,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Search location...">
-                            <button class="btn btn-primary">Search</button>
+                            <input class="search  form-control " type="text" placeholder="Search location...">
+                            <button class="btn btn-primary search-btn">Search</button>
                         </div>
                     </div>
                 </div>
@@ -28,9 +28,9 @@
                     <div class="col-md-4">
                         <div class="card weather-card text-center p-3">
                             <div class="weather-header mb-3 mt-2 ">
-                                <h5 class="mb-1">Maroc</h5>
-                                <small class="d-block">Beni Mellal</small>
-                                <small class="d-block mb-3">few clouds</small>
+                                <h5 class=" country mb-1">Maroc</h5>
+                                <small class=" city d-block">Beni Mellal</small>
+                                <small class="  coulds d-block mb-3">few clouds</small>
                                 
                                 <div class="details-container d-flex justify-content-center align-items-center gap-3">
                                     <div class="weather-icon-container">
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="footer-temp d-flex align-items-center">
                                         <img src="img&icon/temperature-removebg-preview.png" alt="Temperature" class="temperature-icon me-2">
-                                        <h6 class="mb-0">22°C</h6>
+                                        <h6 class="temp mb-0">22°C</h6>
                                     </div>
                                 </div>
                             </div>
@@ -83,25 +83,28 @@
                 </div>
 
                 <!-- Weather Details -->
-                <div class="col-lg-5 col-md-6 mb-4">
+                <div class="col-lg-5 col-md-6 mb-4 text-center">
                     <div class="card weather-card h-100">
-                        <div class="card-body p-4">
+                        <div class="card-body p-3">
                             <div class="details-grid h-100 d-flex flex-column justify-content-around">
                                 <div class="weather-detail d-flex justify-content-between align-items-center">
                                     <img src="img&icon/7963896.png" alt="Wind gusts" class="detail-icon">
-                                    <span>Rafales: 11 km/h</span>
+                                    <h6>Rafales: <span class="Rafales ">11 km/h</span></h6>
                                 </div>
                                 <div class="weather-detail d-flex justify-content-between align-items-center">
                                     <img src="img&icon/1146907.png" alt="Wind speed" class="detail-icon">
-                                    <span>Vent moyen: 2 km/h</span>
+                                    <h6>Vent moyen: <span class="vent"></span></h6>
+                                   
                                 </div>
                                 <div class="weather-detail d-flex justify-content-between align-items-center">
                                     <img src="img&icon/2828802.png" alt="Humidity" class="detail-icon">
-                                    <span>Humidité: 50%</span>
+                                    <h6>Humidité:  <span class="Humidité">50%</span></h6>
+                                    
+                                   
                                 </div>
                                 <div class="weather-detail d-flex justify-content-between align-items-center">
                                     <img src="img&icon/3923638.png" alt="Feels like" class="detail-icon">
-                                    <span>T. ressentie: 11°C</span>
+                                  <h6>feels_like: <span class="feels_like"></span></h6>  
                                 </div>
                             </div>
                         </div>
